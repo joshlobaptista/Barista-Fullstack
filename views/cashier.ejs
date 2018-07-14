@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <title>Cashier</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="cashier.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span>Welcome Cashier!</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        
+        <div class="col-sm-4">
+
+          <h2>Take Their Order</h2>
+          <form action="/orders" method="POST">
+            <input type="text" value="" placeholder="Customer Name" name="customer">
+            <select class="coffee" name="coffee">
+              <option value="Dark Roast">Dark Roast</option>
+              <option value="Cappuccino">Cappuccino</option>
+              <option value="Flat White">Flat White</option>
+              <option value="Macchiato">Macchiato</option>
+              <option value="Regular">Regular</option>
+              <option value="Latte">Latte</option>
+              <option value="Americano">Americano</option>
+            </select>
+            <select class="size" name="size">
+              <option value="Small">small</option>
+              <option value="Medium">Medium</option>
+              <option value="Large">Large</option>
+              <option value="Extra Large">Extra Large</option>
+            </select>
+            <input type="text" value="" placeholder="Other" name="other">
+            <button type="submit">Order</button>
+          </form>
+      </div>
+
+        <div class="col-sm-5">
+          <h3>Completed Order</h3>
+          <ol class="orders">
+          <% for(var i=0; i<orders.length; i++) {%>
+          <% if(orders[i].complete === true) { %>
+            <li class="orders">
+              <span><%= orders[i].name %></span>
+              <span><%= orders[i].customer %></span>
+              <span><%= orders[i].coffee %></span>
+              <span><%= orders[i].size %></span>
+              <span><%= orders[i].other %></span>
+              <span><%= orders[i].check %></span>
+              <span><%= orders[i].thumbDown %></span>
+              <span><%= orders[i].trash %></span>
+              <span><i class="fas fa-check" aria-hidden="true"></i></span>
+              <!-- <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span> -->
+              <!-- <span><i class="fa fa-trash" aria-hidden="true"></i></span> -->
+            </li>
+            <% } %>
+          <% } %>
+        </ol>
+        </div>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+  background-image: url("http://www.photoshopfreebrushes.com/wp-content/uploads/2015/08/coffee-background-pattern-9.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+input{
+  background-color: transparent;
+  width: 30%;
+}
+
+select{
+  background-color: transparent;
+  width: 20%;
+}
+
+button{
+  width: auto;
+  background-color: transparent;
+}
+
+.container .jumbotron{
+  background-image: url("https://orig00.deviantart.net/32ba/f/2012/343/3/9/pokemon_background_by_iwildblood-d5nhuuq.png");
+}
+
+.well{
+  background-color: transparent;
+  border: none;
+}
+
+.col-sm-offset-3{
+  border: 3px solid black;
+  background-color: blanchedalmond;
+  border-radius: 30px;
+}
+
+
+.col-sm-5{
+  border: 3px solid black;
+  background-color: blanchedalmond;
+  border-radius: 30px;
+  text-align: center;
+  width: 50%;
+}
+
+.col-sm-6{
+  border: 3px solid black;
+  background-color: blanchedalmond;
+  border-radius: 30px;
+  text-align: center;
+  width: 25%;
+}
+
+#logo{
+  width: 100%;
+  height: 200px;
+}
+.page-header{
+  border: 3px solid black;
+  background-color: blanchedalmond;
+  border-radius: 30px;
+}
