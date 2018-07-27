@@ -1,7 +1,6 @@
 /**
  * `AuthenticationError` error.
  *
- * @constructor
  * @api private
  */
 function AuthenticationError(message, status) {
@@ -12,9 +11,13 @@ function AuthenticationError(message, status) {
   this.status = status || 401;
 }
 
-// Inherit from `Error`.
+/**
+ * Inherit from `Error`.
+ */
 AuthenticationError.prototype.__proto__ = Error.prototype;
 
 
-// Expose constructor.
+/**
+ * Expose `AuthenticationError`.
+ */
 module.exports = AuthenticationError;
